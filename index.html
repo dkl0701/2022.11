@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            /* font-size: 0.01rem; */
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(245, 245, 245);
+        }
+
+        .box {
+            width: 100%;
+            /* height: 100%; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top {
+            width: 100%;
+            height: 0.5rem;
+            background-color: rgb(255, 131, 0);
+            display: flex;
+            box-sizing: border-box;
+            padding-top: 0.1rem;
+        }
+
+        .top>img {
+            margin-left: 0.1rem;
+        }
+
+        .top img {
+            height: 0.35rem;
+        }
+
+        .top>a:nth-of-type(1) {
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+            flex: 3;
+        }
+        .top>a:nth-of-type(1)>img {
+            position: absolute;
+            top: 0;
+        }
+        .top>a:nth-of-type(2) {
+            flex: 1;
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+        }
+        .top>a:nth-of-type(2)>img {
+            position: absolute;
+            top: 0;
+        }
+        .top>a:nth-of-type(3) {
+            flex: 1;
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+        }
+        .top>a:nth-of-type(3)>img {
+            position: absolute;
+            top: 0;
+        }
+        /* .main {
+            width: 100%;
+            flex: 1;
+        } */
+
+        .button {
+            /* width: 100%; */
+            height: 1.4rem;
+            background-color: rgb(46, 49, 48);
+            font-size: 0.15rem;
+            color: rgb(147, 148, 148);
+            padding: 0.1rem;
+        }
+
+        .button>p:nth-of-type(1) {
+            border-bottom: 0.01rem solid rgb(61, 64, 63);
+            line-height: 0.3rem;
+            padding-bottom: 0.05rem;
+        }
+
+        .button>ul {
+            margin-top: 0.1rem;
+            display: flex;
+        }
+
+        .button>ul>li {
+            flex: 1;
+            margin-left: 0.2rem;
+        }
+
+        .button>ul>li:nth-of-type(2) {
+            margin-left: 0.3rem;
+        }
+
+        .button>ul>li>img {
+            display: inline-block;
+            width: 0.2rem;
+            /* height:0.3rem */
+        }
+
+        .button>ul>li>div {
+            margin-left: 0.1rem;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .button>p:nth-of-type(2) {
+            margin-top: 0.1rem;
+            width: 100%;
+            text-align: center;
+            font-size: 0.13rem;
+        }
+
+        .button>p:nth-of-type(3) {
+            margin-top: 0.02rem;
+            width: 100%;
+            font-size: 0.13rem;
+            text-align: center;
+        }
+
+        .zhao {
+            width: 100%;
+            height: 2.3rem;
+            background: url(./image/index/banner.png) 0 0 no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .sou {
+            position: absolute;
+            bottom: 0.1rem;
+            left: 0.2rem;
+        }
+
+        .sou>span {
+            position: absolute;
+            left: 0.1rem;
+            bottom: 0.2rem;
+            height: 0.165rem;
+            width: 0.165rem;
+            background: url(./image/index/seach.jpg) 0 center no-repeat;
+            background-size: cover;
+            z-index: 2;
+        }
+
+        .sou>input {
+            width: 2.5rem;
+            height: 0.3rem;
+            border-radius: 0.06rem;
+            padding-left: 0.33rem;
+            outline: none;
+        }
+
+        .daohang {
+            width: 100%;
+            height: 1.33rem;
+            background-color: rgb(255, 131, 0);
+            margin-bottom: 0.1rem;
+        }
+
+        .daohang-ul {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .daohang-ul>li {
+            width: 23%;
+            height: 80%;
+            line-height: 80%;
+            margin-top: 0.18rem;
+        }
+
+        .daohang-ul>li:nth-of-type(1)>a {
+            background: url(./image/index/index_03.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+
+        .daohang-ul>li:nth-of-type(2)>a {
+            background: url(./image/index/index_05.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+
+        .daohang-ul>li:nth-of-type(3)>a {
+            background: url(./image/index/index_07.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+
+        .daohang-ul>li:nth-of-type(4)>a {
+            background: url(./image/index/index_09.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+
+        .daohang-ul>li>a {
+            color: #fff;
+            width: 0.55rem;
+            height: 0.54rem;
+            display: inline-block;
+            padding-top: 0.3rem;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 0.12rem;
+            /* line-height: 0.54rem; */
+        }
+
+        .tupian1 {
+            width: 100%;
+            height: 2.5rem;
+            /* background: url(./image/index/banner2.png) no-repeat; */
+            /* background-size: cover; */
+            margin-bottom: 0.2rem;
+        }
+
+        .tupian1>img {
+            width: 100%;
+            /* height: 100%; */
+        }
+
+        .fangyuan {
+            width: 100%;
+            /* padding: 0.1rem; */
+            /* box-sizing: border-box; */
+            background-color: white;
+        }
+
+        .fangyuan>h2 {
+            /* width: 100%; */
+            background-color: rgb(255, 131, 0);
+            color: white;
+            font-size: 0.2rem;
+            padding-top: 0.1rem;
+            padding-left: 0.1rem;
+            line-height: 0.2rem;
+        }
+
+        .fangyuan>h2>span {
+            font-size: 0.1rem;
+        }
+
+        .fangyuan-ul {
+            /* width: 100%; */
+            background-color: white;
+            margin: 0.2rem;
+        }
+
+        .fangyuan-ul>li {
+            margin-top: 0.15rem;
+            border-bottom: 1px solid red;
+            padding-bottom: 0.1rem;
+        }
+
+        .fangyuan-ul>li:nth-of-type(1) {
+            margin-top: 0;
+        }
+
+        .fangyuan-ul>li:nth-of-type(3) {
+            /* margin-top: 0; */
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .fangyuan-ul>li>a {
+            display: flex;
+            /* flex-direction: row; */
+            /* padding: 0.2rem; */
+            /* text-decoration: none; */
+            color: black;
+        }
+
+        .left {
+            flex: 2;
+            position: relative;
+        }
+
+        .left>img {
+            width: 0.8rem;
+            height: 0.8rem;
+            /* margin-top: 0; */
+            position: absolute;
+            top: 0;
+        }
+
+        .right {
+            flex: 3;
+            margin-left: 0.5rem;
+            font-size: 0.1rem;
+            line-height: 0.25rem;
+        }
+
+        .right>h3 {
+            width: 1.87rem;
+            font-size: 0.18rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .right>p:nth-of-type(1) {
+            font-size: 0.13rem;
+        }
+
+        .right>p:nth-of-type(1)>span {
+            float: right;
+            color: red;
+            font-weight: 600;
+        }
+
+        .right>p:nth-of-type(2) {
+            font-size: 0.13rem;
+            color: rgb(139, 139, 139);
+        }
+
+        .right>p:nth-of-type(2)>span {
+            float: right;
+        }
+
+        .right>p:nth-of-type(3) {
+            font-size: 0.13rem;
+            color: rgb(139, 139, 139);
+            /* background-color: rgb(243,247,249); */
+        }
+
+        .right>p:nth-of-type(3)>span {
+            margin-left: 0.05rem;
+            background-color: rgb(243, 247, 249);
+        }
+
+        .guanzhu {
+            width: 100%;
+            font-size: 0.1rem;
+            background-color: white;
+            margin-top: 0.1rem;
+        }
+
+        .guanzhu-top {
+            display: flex;
+        }
+
+        .guanzhu-top>span {
+            flex: 1;
+            text-align: center;
+            font-size: 0.2rem;
+            padding: 0.2rem;
+            border-bottom: 1px solid red;
+            color: rgb(102, 102, 102);
+        }
+
+        .guanzhu-top>span:nth-of-type(1) {
+            color: rgb(255, 131, 82);
+            border-bottom: 2px solid red;
+        }
+
+        .guanzhu-main {
+            display: flex;
+            padding: 0.2rem;
+        }
+
+        .guanzhu-main>ul {
+            flex: 1;
+            font-size: 0.12rem;
+            color: rgb(102, 102, 102);
+        }
+
+        .guanzhu-main>ul:nth-of-type(2) {
+            margin-left: 0.2rem;
+        }
+
+        .guanzhu-main>ul>li {
+            line-height: 0.3rem;
+        }
+
+        .dowload {
+            width: 100%;
+            display: flex;
+            height: 0.5rem;
+            font-size: 0.1rem;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .dowload-left {
+            flex: 3;
+            color: white;
+            font-size: 0.17rem;
+            display: flex;
+            position: relative;
+            background-color: rgb(109, 109, 109,0.5);
+        }
+
+        .dowload-left>img:nth-of-type(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0.14rem;
+            height: 0.14rem;
+
+        }
+        .dowload-text>p:nth-of-type(2) {
+            font-size: 0.12rem;
+
+        }
+
+        .dowload-left>img:nth-of-type(2) {
+            /* flex: 2; */
+            height: 0.3rem;
+            width: 0.3rem;
+            margin-left: 0.5rem;
+            /* width: 40%; */
+            margin: 0.1rem 0.3rem;
+        }
+
+        .dowload-right {
+            flex: 1;
+            background-color: rgb(255, 131, 0);
+            color: white;
+            font-size: 0.17rem;
+            text-align: center;
+            line-height: 0.5rem;
+            padding-left: 0.2rem;
+            padding-bottom: 0.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top">
+            <a href="./index.html"><img src="./image/index/logo.jpg" alt=""></a>
+            <a href="#"><img src="./image/index/my.jpg" alt=""></a>
+            <a href="#"><img src="./image/index/xiazai.jpg" alt=""></a>
+
+
+        </div>
+        <!-- 搜索 -->
+        <section class="zhao">
+            <div class="sou">
+                <span></span>
+                <input type="text" placeholder="输入小区或商圈名开始找房咯！">
+            </div>
+        </section>
+        <!-- 导航 -->
+        <section class="daohang">
+            <ul class="daohang-ul">
+                <li>
+                    <a href=""> 二手房</a>
+                </li>
+                <li>
+                    <a href=""> 新房</a>
+                </li>
+                <li>
+                    <a href=""> 租房</a>
+                </li>
+                <li>
+                    <a href=""> 卖房</a>
+                </li>
+            </ul>
+        </section>
+        <!-- 找房无忧图片1 -->
+        <section class="tupian1">
+            <img src="./image/index/banner2.png" alt="">
+        </section>
+        <section class="fangyuan">
+            <h2>热门房源<br><span>Hot house</span></h2>
+            <ul class="fangyuan-ul">
+                <li><a href="">
+                        <div class="left"><img src="./image/index/img1.jpg" alt=""></div>
+                        <div class="right">
+                            <h3>文化部中间层 一层带阁楼</h3>
+                            <p>2室1厅96㎡南北 <span>1105万</span></p>
+                            <p>红庙北里 <span>14268元/平</span></p>
+                            <p><span>学区房</span><span>独家</span></p>
+                        </div>
+                    </a></li>
+                <li><a href="">
+                        <div class="left"><img src="./image/index/img2.png" alt=""></div>
+                        <div class="right">
+                            <h3>光大水墨 精装复式 稀缺</h3>
+                            <p>2室1厅96㎡南北 <span>280万</span></p>
+                            <p>光大水墨 <span>14268元/平</span></p>
+                            <p><span>学区房</span><span>独家</span><span>满五唯一</span></p>
+                        </div>
+                    </a></li>
+                <li><a href="">
+                        <div class="left"><img src="./image/index/img3.png" alt=""></div>
+                        <div class="right">
+                            <h3>南北通透两居 精装修 无</h3>
+                            <p>2室1厅96㎡南北 <span>320万</span></p>
+                            <p>北京新天地 <span>14268元/平</span></p>
+                            <p><span>地铁房</span><span>独家</span></p>
+                        </div>
+                    </a></li>
+            </ul>
+        </section>
+        <section class="guanzhu">
+            <div class="guanzhu-top"><span>热门关注</span><span>友情连接</span></div>
+            <div class="guanzhu-main">
+                <ul>
+                    <li>北京二手房</li>
+                    <li>北京二手房价</li>
+                    <li>海淀日租房</li>
+                    <li>朝阳新房</li>
+                </ul>
+                <ul>
+                    <li>北京找房无忧</li>
+                    <li>青年家园</li>
+                    <li>免税房源</li>
+                    <li>满五年唯一免税</li>
+                </ul>
+            </div>
+        </section>
+        <div class="button">
+            <p>北京找房无忧 > 首页</p>
+            <ul>
+                <li>
+                    <img src="./image/index/apple.png" alt="">
+                    <div>
+                        <p>iPhone</p>
+                        <p>客户端</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./image/index/android.png" alt="">
+                    <div>
+                        <p>Android</p>
+                        <p>客户端</p>
+                    </div>
+                </li>
+            </ul>
+            <p>北京找房无忧房地产经纪公司</p>
+            <p>网络经营许可证京ICP备20160812号</p>
+        </div>
+        <div class="dowload">
+            <div class="dowload-left">
+                <img src="./image/index/close.png" alt="">
+                <img src="./image/index/download.png" alt="">
+                <div class="dowload-text">
+                    <p>找房无忧</p>
+                    <p>市场行情，一手掌握！</p>
+                </div>
+
+            </div>
+            <a href=""><div class="dowload-right">免费下载</div></a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
