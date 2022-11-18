@@ -373,7 +373,7 @@
                     width: 0.81rem;
                     height: 0.81rem;
 
-                    &>img {
+                    &>a>img {
                         width: 100%;
                         height: 100%;
                     }
@@ -385,27 +385,36 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
 
-                    // background-color: aqua;
-                    &>h2 {
-                        font-size: 0.14rem;
-                        line-height: 0.2rem;
-                    }
+                    &>a {
 
-                    &>p {
-                        margin-top: 0.1rem;
-                        line-height: 0.11rem;
+                        color: black;
+                        &>h2 {
 
-                        &>span {
-                            border: 1px solid rgb(109, 167, 25);
-                            padding: 0.02rem;
-                            box-sizing: border-box;
-                            line-height: 0.21rem;
-                            .color(rgb(109, 167, 25));
+                            font-size: 0.16rem;
+                            line-height: 0.2rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+
                         }
 
-                        &>strong {
-                            .color;
-                            margin-left: 0.1rem;
+                        &>p {
+                            
+                            margin-top: 0.1rem;
+                            line-height: 0.11rem;
+
+                            &>span {
+                                border: 1px solid rgb(109, 167, 25);
+                                padding: 0.02rem;
+                                box-sizing: border-box;
+                                line-height: 0.21rem;
+                                .color(rgb(109, 167, 25));
+                            }
+
+                            &>strong {
+                                .color;
+                                margin-left: 0.1rem;
+                            }
                         }
                     }
                 }

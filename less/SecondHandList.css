@@ -297,7 +297,7 @@
   width: 0.81rem;
   height: 0.81rem;
 }
-.main > .house-content ul > li > .left > img {
+.main > .house-content ul > li > .left > a > img {
   width: 100%;
   height: 100%;
 }
@@ -307,19 +307,23 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main > .house-content ul > li > .right > h2 {
-  font-size: 0.14rem;
+.main > .house-content ul > li > .right > a {
+  color: black;
 }
-.main > .house-content ul > li > .right > p {
+.main > .house-content ul > li > .right > a > h2 {
+  font-size: 0.16rem;
+  line-height: 0.2rem;
+}
+.main > .house-content ul > li > .right > a > p {
   margin-top: 0.12rem;
   line-height: 0.12rem;
   color: #afadad;
 }
-.main > .house-content ul > li > .right > p > strong {
+.main > .house-content ul > li > .right > a > p > strong {
   color: #ff8a00;
   margin-left: 0.1rem;
 }
-.main > .house-content ul > li > .right > p:nth-of-type(1) {
+.main > .house-content ul > li > .right > a > p:nth-of-type(1) {
   color: black;
 }
 .main > .house-content ul > li:last-child {

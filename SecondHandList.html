@@ -36,7 +36,7 @@
                 <ul class="nav">
                     <!--添加active类名就可以改变导航栏小箭头的方向和颜色-->
                     <li id="quyu">
-                        <h2>
+                        <h2 id="a1">
                             <a href="#">
                                 区域
                                 <span></span>
@@ -200,35 +200,47 @@
                 <ul>
                     <li>
                         <div class="left">
+                           <a href="./SecondHandDetails.html">
                             <img src="./image/SecondHandList/img1.png" alt="">
+                           </a>
                         </div>
                         <div class="right">
-                            <h2>西便门外大街2室1厅89平</h2>
+                            <a href="./SecondHandDetails.html">
+                                <h2>西便门外大街2室1厅89平</h2>
                             <p>南北 高楼层/6层</p>
                             <p><span>签约价格:13244元/平</span><strong>1105万</strong></p>
                             <p>签约日期:2015年11月10日</p>
+                            </a>
                         </div>
                     </li>
                     <li>
                         <div class="left">
-                            <img src="./image/SecondHandList/img2.png" alt="">
+                            <a href="./SecondHandDetails.html">
+                                <img src="./image/SecondHandList/img2.png" alt="">
+                               </a>
                         </div>
                         <div class="right">
+                           <a href="./SecondHandDetails.html">
                             <h2>金桥国际 1室1厅 63平</h2>
                             <p>南北 高楼层/6层</p>
                             <p><span>签约价格:13244元/平</span><strong>905万</strong></p>
                             <p>签约日期:2015年11月10日</p>
+                           </a>
                         </div>
                     </li>
                     <li>
                         <div class="left">
-                            <img src="./image/SecondHandList/img3.png" alt="">
+                            <a href="./SecondHandDetails.html">
+                                <img src="./image/SecondHandList/img3.png" alt="">
+                               </a>
                         </div>
                         <div class="right">
-                            <h2>花涧溪二期 2室2厅 90平</h2>
+                            <a href="./SecondHandDetails.html">
+                                <h2>花涧溪二期 2室2厅 90平</h2>
                             <p>南北 高楼层/6层</p>
                             <p><span>签约价格:13244元/平</span><strong>1322万</strong></p>
                             <p>签约日期:2015年11月10日</p>
+                            </a>
                         </div>
                     </li>
                 </ul>
@@ -279,6 +291,12 @@
     var house = document.getElementsByClassName('house')[0];
     var more = document.getElementsByClassName('more')[0];
 
+//  var a1=document.getElementById('a1').children;
+//  console.log(a1);
+
+
+
+
     // 点击导航栏的时候
     nav.show = function () {
         // 把导航条置于页面最顶端
@@ -301,6 +319,9 @@
 
         // 给导航栏上的a元素切换上下箭头及字体颜色  都没实现
         //找到要加active属性的a
+        // a1.addClass='active';
+        // a1.classList.add("active");
+
         // var a1 = quyu.children;
         // a1.className='active';
         // console.log(a1);
