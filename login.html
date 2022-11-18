@@ -103,6 +103,9 @@
 
         .putong {
             background-color: white;
+            height: 2rem;
+            display: flex;
+            flex-direction: column;
         }
 
         .denglu2 {
@@ -127,20 +130,20 @@
             display: flex;
             flex-direction: column;
             height: 1.5rem;
-            /* display: none; */
+            display: none;
         }
 
         .putongdenglu2>input {
             /* height: 0.2rem; */
-            flex: 2;
-            width: 100%;
+            flex: 1;
+            /* width: 100%; */
             border: none;
             border-bottom: 0.01rem solid rgb(209, 209, 209);
             padding: 0.1rem;
         }
 
         .putongdenglu2>button {
-            flex: 3;
+            flex: 1;
             background-color: rgb(255, 131, 0);
             border: none;
             margin: 0.2rem 0.2rem 0;
@@ -149,28 +152,29 @@
         }
 
         .yanzhengmadenglu2 {
-            display: flex;
-            flex-direction: column;
             height: 1.5rem;
             position: relative;
-            display: none;
+            /* display: none; */
+            flex: 2;
+            display: flex;
+            flex-direction: column;
         }
 
         .yanzhengmadenglu2>input {
-            /* height: 0.2rem; */
-            flex: 2;
-            width: 100%;
+            height: 0.2rem;
+            /* width: 100%; */
             border: none;
             border-bottom: 0.01rem solid rgb(209, 209, 209);
             padding: 0.1rem;
+            flex: 1;
         }
         .yanzhengmadenglu2>button {
-            flex: 3;
             background-color: rgb(255, 131, 0);
             border: none;
             margin: 0.2rem 0.2rem 0;
             color: white;
             font-size: 0.2rem;
+            flex: 1;
         }
         .yanzhengmadenglu2>span {
             width: 0.6rem;
@@ -195,6 +199,9 @@
         .lianjie>a{
             color: rgb(102,102,102);
         }
+        input {
+            outline: none;
+        }
     </style>
 </head>
 
@@ -215,15 +222,15 @@
                 <span class="yanzhengmadenglu">验证码快捷登录</span>
             </div>
             <div class="putongdenglu2">
-                <input type="text" placeholder="请输入手机号码">
-                <input type="password" placeholder="请输入密码">
-                <button>立即登录</button>
+                <input type="text" placeholder="请输入手机号码" id="user">
+                <input type="password" placeholder="请输入密码" id="mima">
+                <button onclick="fn()">立即登录</button>
             </div>
             <div class="yanzhengmadenglu2">
-                    <input type="text" placeholder="请输入手机号码">
+                    <input type="text" placeholder="请输入手机号码" id="user">
                     <span class="fasongyanzhengma">发送验证码</span>
-                <input type="password" placeholder="请输入短信中的验证码">
-                <button>验证并登录</button>
+                <input type="text" placeholder="请输入短信中的验证码" id="yanzhengma">
+                <button onclick="fn2()">验证并登录</button>
             </div>
         </section>
         <div class="lianjie"><a href="./register.html">立即注册</a><a href="./findPassword.html">忘记密码</a></div>
@@ -234,3 +241,93 @@
 
 </html>
 <script src="./js/rem.js"></script>
+<script>
+    var yanzhengma=document.getElementsByClassName('yanzhengmadenglu')[0];
+    var yanzhengma2=document.getElementsByClassName('yanzhengmadenglu2')[0];
+    var putong=document.getElementsByClassName('putongdenglu')[0];
+    var putong2=document.getElementsByClassName('putongdenglu2')[0];
+    putong.onclick = function() {
+        yanzhengma2.style.display = "none";
+        putong2.style.display = "block";
+        putong2.style.display = "flex";
+        putong2.style.flexDirection = "column";
+        putong.style.borderBottom='0.04rem solid rgb(255, 131, 0)';
+        yanzhengma.style.borderBottom='0.04rem solid rgb(209, 209, 209)';
+    }
+
+    yanzhengma.onclick = function() {
+        putong2.style.display = "none";
+        yanzhengma2.style.display = "block";
+        yanzhengma2.style.display = "flex";
+        yanzhengma2.style.flexDirection = "column";
+        yanzhengma.style.borderBottom='0.04rem solid rgb(255, 131, 0)';
+        putong.style.borderBottom='0.04rem solid rgb(209, 209, 209)';
+    }
+    
+
+</script>
+
+<script>
+    // 随机获取验证码 
+
+    // 禁用不知道放哪里合适
+    // code.disabled='false';//解除禁用
+    // code.disabled='true';//禁用
+    // 获取验证码计时会到负数
+    var huoqu = document.getElementsByClassName('fasongyanzhengma')[0]
+    var str = 0
+    var num = 60
+    var timer = null;
+    huoqu.onclick = function () {
+        clearInterval(timer)
+        timer = setInterval(function () {
+            num--
+            huoqu.innerHTML = `${num}秒后重发`
+            huoqu.disabled = 'true'
+            if (num == 59) {
+                str = Math.round(Math.random() * 1000)
+                str > 1000 ? str : str = str + 1000
+                alert('验证码为：' + str)
+            }
+
+            if (num == 0) {
+                huoqu.innerHTML = `获取验证码`
+                num = 60
+                huoqu.disabled = 'false'
+            }
+        }, 1000)
+        console.log(str);
+    }
+    var yanzhengma = document.getElementById('yanzhengma')
+    yanzhengma.onblur = function () {
+        if (yanzhengma.value == '') {
+            yanzhengma.innerHTML = `验证码不得为空`
+        } else if (yanzhengma.value != str) {
+            alert('您输入的验证码有误，请重新输入')
+        }
+    }
+    var user = document.getElementById('user');
+    var user_ = getCookie('user');
+    function fn2() {
+        if (user.value == user_ && mima.value == str) {
+            alert('登录成功！')
+            location.href = './myLogin.html';
+        } else {
+            alert('用户名不存在,或验证码不正确');
+        }
+    }
+</script>
+<script>
+    var user = document.getElementById('user');
+    var mima = document.getElementById('mima');
+    var user_ = getCookie('user');
+    var mima_ = getCookie('mima');
+    function fn() {
+        if (user.value == user_ && mima.value == mima_) {
+            alert('登录成功！')
+            location.href = './myLogin.html';
+        } else {
+            alert('用户名不存在,或密码不正确');
+        }
+    }
+</script>
