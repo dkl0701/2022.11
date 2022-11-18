@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        a{
+            color: black;
+        }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(245, 245, 245);
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .head {
+            outline: 1px solid red;
+            position: relative;
+        }
+
+        .head>img:nth-of-type(1) {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .head>img:nth-of-type(2) {
+            width: 0.53rem;
+            height: 0.53rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .top {
+            /* width: 100%; */
+            height: 0.5rem;
+            background-color: rgb(255, 131, 0);
+            display: flex;
+            box-sizing: border-box;
+            padding-top: 0.1rem;
+        }
+
+        .top>img {
+            margin-left: 0.1rem;
+        }
+
+        .top img {
+            height: 0.35rem;
+        }
+
+        .top>a:nth-of-type(1) {
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+            flex: 3;
+        }
+
+        .top>a:nth-of-type(1)>img {
+            position: absolute;
+            top: 0;
+        }
+
+        .top>a:nth-of-type(2) {
+            flex: 1;
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+        }
+
+        .top>a:nth-of-type(2)>img {
+            position: absolute;
+            top: 0;
+        }
+
+        .top>a:nth-of-type(3) {
+            flex: 1;
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+        }
+
+        .top>a:nth-of-type(3)>img {
+            position: absolute;
+            top: 0;
+        }
+
+        .denglu {
+            height: 0.18rem;
+            background-color: white;
+            font-size: 0.12rem;
+            padding: 0.1rem;
+            letter-spacing: 0.02rem;
+            border-bottom: 0.01rem solid rgb(197, 197, 197);
+        }
+
+        .denglu>a {
+            font-size: 0.12rem;
+        }
+
+        .denglu>a:nth-of-type(1) {
+            font-weight: 600;
+        }
+
+        .head>a {
+            /* width: 0.5rem; */
+            height: 0.23rem;
+            color: white;
+            text-align: center;
+            line-height: 0.23rem;
+            /* border: 1px solid white; */
+            font-size: 0.12rem;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* .head>a {
+        } */
+        .xiangqing {
+            /* margin-top: 0.12rem; */
+            background: #ffffff;
+            padding: 0 0.2rem;
+            font-size: 0.12rem;
+            border-bottom: 1px solid rgb(220, 220, 220);
+        }
+
+        .xiangqing li {
+            height: 0.48rem;
+            line-height: 0.48rem;
+            border-bottom: 1px solid rgb(220, 220, 220);
+            background: url(./image/my/right.png) right center no-repeat;
+            background-size: 0.07rem 0.14rem;
+        }
+
+        .xiangqing>ul>li:nth-of-type(3) {
+            border: none;
+        }
+
+        .xiangqing li a {
+            color: black;
+        }
+
+        .xiangqing img {
+            width: 0.16rem;
+            height: 0.16rem;
+        }
+
+        .tuichu {
+            width: 90%;
+            height: 0.4rem;
+            background-color: white;
+            margin: 0.3rem auto;
+            border: 0.01rem solid rgb(220, 220, 220);
+            color: rgb(255, 131, 0);
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 头部 -->
+        <div class="top">
+            <a href="./index.html"><img src="./image/index/logo.jpg" alt=""></a>
+            <a href="./my.html"><img src="./image/index/my.jpg" alt=""></a>
+            <a href="#"><img src="./image/index/xiazai.jpg" alt=""></a>
+        </div>
+        <section class="denglu">
+            <a href="./index.html">首页</a>> <a href="./my.html">我的</a>
+        </section>
+        <section class="head">
+            <img src="./image/my/bg2.png" alt="">
+            <img src="./image/my/urse2.png" alt="">
+            <a href="./login.html" class="a3">欢迎你</a>
+        </section>
+        <section class="xiangqing">
+            <ul>
+                <li><a href="#">我关注的房源</a></li>
+                <li><a href="./myHouse.html">我关注的小区</a></li>
+                <li><a href="#">我的看房记录</a></li>
+            </ul>
+        </section>
+        <button class="tuichu" onclick="exitu()">退出登录</button>
+        <!-- <div class="main"></div> -->
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/cookie.js"></script>
+<script>
+    var zhuce = document.getElementsByClassName('a3')[0]
+    var tuichu = document.getElementsByClassName('tuichu')[0]
+    if (getCookie('user') == '' || getCookie('user') == null) {
+        zhuce.innerHTML = '注册'
+    } else {
+        zhuce.innerHTML = '欢迎你,' + getCookie('user')
+        tuichu.style.display = 'block';
+        function exitu() {
+            removeCookie('user');
+            zhuce.innerHTML = '登录'
+            zhuce.style.border = '0.01rem solid white'
+            zhuce.style.padding = '0 0.03rem'
+            tuichu.style.display = 'none'
+            //刷新部分
+            // load_data();
+        }
+    }
+
+</script>

@@ -1,0 +1,253 @@
+/* 轮播图和主要房源信息 */
+.content1 {
+  width: 100%;
+  background-color: white;
+}
+.content1 > .swiper {
+  width: 3.2rem;
+  height: 1.85rem;
+}
+.content1 > .swiper > .swiper-wrapper > .swiper-slide > a > img {
+  width: 100%;
+  height: 100%;
+}
+.content1 > .main-info {
+  padding: 0.2rem;
+  border-bottom: 1px solid #dfdddd;
+}
+.content1 > .main-info > p {
+  margin-top: 0.1rem;
+  color: #adaaaa;
+}
+.content1 > .main-info > p:nth-of-type(1) {
+  font-size: 0.14rem;
+  color: black;
+  background: url(../image/SecondHandList/phone.png) no-repeat right center;
+  background-size: contain;
+}
+.content1 > .main-info > p:nth-of-type(1) > span {
+  color: #e70d0d;
+  font-weight: 900;
+}
+.content1 > .main-info > p:nth-of-type(3) {
+  margin-top: 0.15rem;
+}
+.content1 > .main-info > p:nth-of-type(3) > span {
+  background-color: #dee9f0;
+  margin-right: 0.1rem;
+  padding: 0.05rem;
+  box-sizing: border-box;
+}
+/* 户型信息 */
+.content2 {
+  background-color: white;
+  border-top: 1px solid #dfdddd;
+  border-bottom: 1px solid #dfdddd;
+  margin-top: 0.1rem;
+  padding: 0 0.2rem;
+}
+.content2 > ul > li {
+  border-bottom: 1px solid #dfdddd;
+  line-height: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+.content2 > ul > li > p {
+  flex: 1;
+}
+.content2 > ul > li:last-child {
+  border-bottom: none;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* 房源特色 */
+.content3 {
+  background-color: white;
+  border-top: 1px solid #dfdddd;
+  border-bottom: 1px solid #dfdddd;
+  margin-top: 0.1rem;
+  padding: 0 0.2rem;
+}
+.content3 > h2 {
+  line-height: 0.5rem;
+  border-bottom: 1px solid #dfdddd;
+  color: #ff8a00;
+}
+.content3 > p {
+  padding: 0.1rem 0;
+  line-height: 0.25rem;
+  border-bottom: 1px solid #dfdddd;
+}
+.content3 > :last-child {
+  text-align: center;
+  color: gray;
+}
+/* 户型分间 */
+.content4 {
+  background-color: white;
+  border-top: 1px solid #dfdddd;
+  border-bottom: 1px solid #dfdddd;
+  margin-top: 0.1rem;
+  padding: 0 0.2rem;
+}
+.content4 > h2 {
+  line-height: 0.5rem;
+  border-bottom: 1px solid #dfdddd;
+  color: #ff8a00;
+}
+.content4 > ul > li {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ff8a00;
+  padding: 0.2rem 0;
+}
+.content4 > ul > li > .left {
+  flex: 1;
+  width: 0.71rem;
+  height: 0.71rem;
+}
+.content4 > ul > li > .left > img {
+  width: 100%;
+  height: 100%;
+}
+.content4 > ul > li > .right {
+  flex: 2;
+  margin-left: 0.1rem;
+  line-height: 0.25rem;
+}
+.content4 > ul > li > .right > p > span {
+  background-color: #eceff1;
+  margin-right: 0.1rem;
+  padding: 0.05rem;
+  color: #a1b7c7;
+}
+.content4 > ul > li:last-child {
+  border-bottom: none;
+}
+/* 对口学校 */
+.content5 {
+  background-color: white;
+  border-top: 1px solid #dfdddd;
+  border-bottom: 1px solid #dfdddd;
+  margin-top: 0.1rem;
+  padding: 0 0.2rem;
+}
+.content5 > h2 {
+  line-height: 0.5rem;
+  border-bottom: 1px solid #dfdddd;
+  color: #ff8a00;
+}
+.content5 > ul {
+  line-height: 0.5rem;
+}
+.content5 > ul > li {
+  border-bottom: 1px solid #dfdddd;
+}
+.content5 > ul > li > span:nth-last-child(1) {
+  color: gray;
+}
+.content5 > ul > li:last-child {
+  text-align: center;
+  border-bottom: none;
+}
+.content5 > ul > li:last-child > a {
+  color: gray;
+}
+/* 位置及周边 */
+.content6 {
+  background-color: white;
+  border-top: 1px solid #dfdddd;
+  border-bottom: 1px solid #dfdddd;
+  margin-top: 0.1rem;
+  padding: 0 0.2rem;
+}
+.content6 > h2 {
+  line-height: 0.5rem;
+  border-bottom: 1px solid #dfdddd;
+  color: #ff8a00;
+}
+.content6 div {
+  margin: 0.2rem 0;
+}
+.content6 div > img {
+  width: 100%;
+}
+/* 推荐房源 */
+.content7 {
+  background-color: white;
+  border-top: 1px solid #dfdddd;
+  border-bottom: 1px solid #dfdddd;
+  margin-top: 0.1rem;
+  padding: 0 0.2rem;
+}
+.content7 > h2 {
+  line-height: 0.5rem;
+  border-bottom: 1px solid #dfdddd;
+  color: #ff8a00;
+}
+.content7 > ul > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfdddd;
+  padding-bottom: 0.6rem;
+  padding-top: 0.2rem;
+  position: relative;
+}
+.content7 > ul > li > .img > img {
+  width: 0.81rem;
+  height: 0.81rem;
+}
+.content7 > ul > li > .text > h2 {
+  width: 1.87rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content7 > ul > li > .text > p {
+  line-height: 0.25rem;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content7 > ul > li > .text > p > strong {
+  color: #ff8a00;
+}
+.content7 > ul > li > .text > p a {
+  background-color: #eceff1;
+  padding: 0 0.05rem;
+  color: #a1b7c7;
+}
+.content7 > ul > li > .text > p:nth-of-type(2) {
+  color: gray;
+}
+.content7 > ul > li > .tip {
+  position: absolute;
+  bottom: 0.18rem;
+  left: 0;
+  background: #f2f2f2;
+  width: 100%;
+  padding: 0.1rem;
+}
+.content7 > ul > li > .tip > span {
+  position: absolute;
+  top: -0.18rem;
+  left: 0;
+  border-top: 0.1rem solid transparent;
+  border-right: 0.1rem solid transparent;
+  border-left: 0.1rem solid transparent;
+  border-bottom: 0.1rem solid #f2f2f2;
+  z-index: 10;
+  margin-left: 0.05rem;
+}
+.content7 > .more {
+  line-height: 0.5rem;
+  text-align: center;
+}
+.content7 > .more > a {
+  color: gray;
+}

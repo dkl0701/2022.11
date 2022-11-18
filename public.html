@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(245,245,245);
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top {
+            width: 100%;
+            height: 0.5rem;
+            background-color: rgb(255, 131, 0);
+            display: flex;
+            box-sizing: border-box;
+            padding-top: 0.1rem;
+        }
+
+        .top>img {
+            margin-left: 0.1rem;
+        }
+
+        .top img {
+            height: 0.35rem;
+        }
+
+        .top>a:nth-of-type(1) {
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+            flex: 3;
+        }
+        .top>a:nth-of-type(1)>img {
+            position: absolute;
+            top: 0;
+        }
+        .top>a:nth-of-type(2) {
+            flex: 1;
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+        }
+        .top>a:nth-of-type(2)>img {
+            position: absolute;
+            top: 0;
+        }
+        .top>a:nth-of-type(3) {
+            flex: 1;
+            height: 0.35rem;
+            margin-left: 0.3rem;
+            position: relative;
+        }
+        .top>a:nth-of-type(3)>img {
+            position: absolute;
+            top: 0;
+        }
+
+        /* .main {
+            width: 100%;
+            flex: 1;
+        } */
+
+        .button {
+            width: 100%;
+            height: 1.4rem;
+            background-color: rgb(46, 49, 48);
+            font-size: 0.15rem;
+            color: rgb(147, 148, 148);
+            padding: 0.1rem;
+        }
+
+        .button>p:nth-of-type(1) {
+            border-bottom: 0.01rem solid rgb(61, 64, 63);
+            line-height: 0.3rem;
+            padding-bottom: 0.05rem;
+        }
+        .button>ul{
+            margin-top: 0.1rem;
+            display: flex;
+        }
+        .button>ul>li {
+            flex: 1;
+            margin-left: 0.2rem;
+        }
+        .button>ul>li:nth-of-type(2) {
+            margin-left: 0.3rem;
+        }
+        .button>ul>li>img {
+            display: inline-block;
+            width: 0.2rem;
+            /* height:0.3rem */
+        }
+        .button>ul>li>div {
+            margin-left: 0.1rem;
+            display: inline-block;
+            text-align: center;
+        }
+        .button>p:nth-of-type(2) {
+            margin-top: 0.1rem;
+            width: 100%;
+            text-align: center;
+            font-size: 0.13rem;
+        }
+        .button>p:nth-of-type(3) {
+            margin-top: 0.02rem;
+            width: 100%;
+            font-size: 0.13rem;
+            text-align: center;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 头部 -->
+        <div class="top">
+            <a href="./index.html"><img src="./image/index/logo.jpg" alt=""></a>
+            <a href="#"><img src="./image/index/my.jpg" alt=""></a>
+            <a href="#"><img src="./image/index/xiazai.jpg" alt=""></a>
+        </div>
+        <!-- <div class="main"></div> -->
+        <div class="button">
+            <p>北京找房无忧 > 首页</p>
+            <ul>
+                <li>
+                    <img src="./image/index/apple.png" alt="">
+                    <div>
+                        <p>iPhone</p>
+                        <p>客户端</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./image/index/android.png" alt="">
+                    <div>
+                        <p>Android</p>
+                        <p>客户端</p>
+                    </div>
+                </li>
+            </ul>
+            <p>北京找房无忧房地产经纪公司</p>
+            <p>网络经营许可证京ICP备20160812号</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>

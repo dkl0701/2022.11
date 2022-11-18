@@ -1,0 +1,407 @@
+//封装变量
+.color(@color: rgb(255, 138, 0)) {
+    color: @color;
+}
+
+/* 主体部分 */
+.main {
+    width: 100%;
+
+    /* 搜索框 */
+    &>.search {
+        width: 2.9rem;
+        // background-color: aqua;
+        margin: 0.1rem auto;
+        position: relative;
+
+        &>input {
+            width: 2.9rem;
+            height: 0.4rem;
+            outline: none;
+            border-radius: 0.04rem;
+            border: 1px solid rgb(221, 216, 216);
+            // font-size: 0.12rem;
+            text-indent: 0.1rem;
+            // padding-left: 0.1rem;
+        }
+
+        &>span {
+            position: absolute;
+            top: 0.12rem;
+            right: 0.42rem;
+        }
+
+        &>a>img {
+            width: 0.2rem;
+            height: 0.2rem;
+            position: absolute;
+            top: 0.12rem;
+            right: 0.15rem;
+        }
+    }
+
+    /* 导航栏及列表部分 */
+    &>.nav-list {
+        width: 100%;
+
+        /* 遮罩层 */
+        &>.hide {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(104, 103, 103, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 2;
+        }
+
+        /* 导航栏 */
+        &>.nav {
+            width: 100%;
+            height: 0.4rem;
+            // background-color: aqua;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid rgb(214, 211, 211);
+            border-bottom: 1px solid rgb(214, 211, 211);
+            background-color: white;
+            position: relative;
+            z-index: 4;
+            // position: fixed;
+            // top: 0;
+            // left: 0;
+
+            &>li>h2>a {
+                color: rgb(95, 92, 92);
+
+                &>span {
+                    border-top: 0.04rem solid rgb(215, 214, 214);
+                    border-right: 0.04rem solid transparent;
+                    border-bottom: 0.04rem solid transparent;
+                    border-left: 0.04rem solid transparent;
+                    position: absolute;
+                    top: 0.13rem;
+                }
+            }
+
+            &>li>h2>.active {
+                .color;
+
+                &>span {
+                    border-top: 0.04rem solid transparent;
+                    border-right: 0.04rem solid transparent;
+                    border-bottom: 0.04rem solid rgb(255, 138, 0);
+                    border-left: 0.04rem solid transparent;
+                    position: absolute;
+                    top: 0.1rem;
+                }
+            }
+        }
+
+        /* 点开导航栏弹出的列表 */
+        &>.list {
+            width: 100%;
+            position: fixed;
+            top: 0.4rem;
+            left: 0;
+            z-index: 10;
+
+            /* 区域模块 */
+            &>.area {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                display: none;
+
+                &>.area-title {
+                    flex: 1;
+                    background-color: rgb(240, 240, 240);
+                    border-right: 1px solid rgb(152, 147, 147);
+                    text-align: center;
+
+                    &>h2 {
+                        width: 100%;
+                        line-height: 0.4rem;
+                    }
+
+                    &>.active {
+                        background-color: white;
+                        border-right: 1px solid white;
+                        .color;
+                    }
+                }
+
+                &>.area-list {
+                    flex: 3;
+
+                    &>ul {
+                        width: 100%;
+                        height: 2.8rem;
+                        display: flex;
+                        line-height: 0.4rem;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-content: space-around;
+
+                        &>li>a {
+                            color: rgb(90, 87, 87);
+                        }
+
+                        &>li>.active {
+                            .color;
+                        }
+                    }
+                }
+            }
+
+            /* 价格  */
+            &>.price {
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                display: none;
+
+                &>ul {
+                    width: 100%;
+                    height: 2.8rem;
+                    line-height: 0.38rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    &>li {
+                        margin: 0 0.2rem;
+                        border-bottom: 1px solid rgb(214, 211, 211);
+
+                        &>a {
+                            color: rgb(95, 92, 92);
+                        }
+                    }
+
+                    &>:last-child {
+                        border-bottom: none;
+                    }
+
+                }
+            }
+
+            /* 房型 */
+            &>.house {
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                padding-bottom: 0.2rem;
+                box-sizing: border-box;
+                display: none;
+
+                &>ul {
+                    width: 100%;
+                    height: 2.8rem;
+                    line-height: 0.38rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    &>li {
+                        margin: 0 0.2rem;
+                        border-bottom: 1px solid rgb(214, 211, 211);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        &>span {
+
+                            width: 0.15rem;
+                            height: 0.15rem;
+                            // background-color: aqua;
+                            border: 1px solid rgb(196, 193, 193);
+                        }
+
+                        &>a {
+                            .color(rgb(95, 92, 92));
+                        }
+                    }
+
+                    &>li:nth-of-type(3) {
+                        background: url(../image/SecondHandList/ok.png) no-repeat right center;
+                        background-size: 0.15rem;
+                    }
+
+                    &>:nth-last-child(2) {
+                        border-bottom: none;
+                    }
+
+                    &>:last-child {
+                        width: 2.5rem;
+                        background-color: rgb(255, 138, 0);
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        &>.btnOK {
+                            .color(white);
+                            font-weight: 900;
+                        }
+                    }
+
+                }
+            }
+
+            /* 更多 */
+            &>.more {
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                display: none;
+
+                &>ul {
+                    width: 100%;
+                    // height: 2.8rem;
+                    // line-height: 0.38rem;
+                    padding-bottom: 0.2rem;
+                    box-sizing: border-box;
+
+                    &>li {
+                        width: 100%;
+                        margin-top: 0.1rem;
+
+                        &>h3 {
+                            // background-color: aqua;
+                            padding: 0 0.2rem;
+                            box-sizing: border-box;
+                        }
+
+                        &>.more-list {
+                            border-bottom: 1px solid rgb(214, 211, 211);
+                            margin: 0.1rem 0.15rem;
+                            padding-bottom: 0.1rem;
+                            box-sizing: border-box;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            text-align: center;
+                            line-height: 0.3rem;
+
+                            &>li {
+                                margin: 0.06rem 0.03rem;
+                                width: 0.68rem;
+                                height: 0.3rem;
+                                border: 1px solid rgb(214, 211, 211);
+                            }
+                        }
+                    }
+
+                    &>.clear {
+                        text-align: center;
+                        line-height: 0.3rem;
+
+                        &>a {
+                            .color(rgb(95, 92, 92));
+                        }
+                    }
+
+                    &>:last-child {
+                        width: 2.5rem;
+                        background-color: rgb(255, 138, 0);
+                        margin: 0 auto;
+                        text-align: center;
+                        line-height: 0.3rem;
+
+                        &>.btnOK {
+                            .color(white);
+                            font-weight: 900;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    /* 房屋详情信息 */
+    &>.house-content {
+        width: 100%;
+
+        ul {
+            width: 100%;
+            padding: 0 0.2rem;
+            box-sizing: border-box;
+
+            &>li {
+                width: 100%;
+                // height: 1.2rem;
+                padding: 0.2rem 0;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgb(255, 131, 0);
+
+                &>.left {
+                    width: 0.81rem;
+                    height: 0.81rem;
+
+                    &>a>img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &>.right {
+                    width: 1.85rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &>a {   
+                    color: black;
+                        &>h2 {
+                            font-size: 0.16rem;
+                            line-height: 0.2rem;
+
+                        }
+
+                        &>p {
+                            margin-top: 0.12rem;
+                            line-height: 0.12rem;
+                            color: rgb(175, 173, 173);
+
+                            &>strong {
+                                .color;
+                                margin-left: 0.1rem;
+                            }
+                        }
+
+                        &>p:nth-of-type(1) {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            &>li:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
