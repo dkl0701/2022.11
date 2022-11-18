@@ -223,7 +223,7 @@
     var user = document.getElementById('user')
     var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;
     user.onblur = function () {
-        if (user.value.length >= 10) {
+        if (user.value.length > 11) {
             alert('不能大于11位数')
         } else if (!reg.test(user.value)) {
             alert('输入格式不正确');

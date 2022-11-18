@@ -460,10 +460,10 @@
         <section class="daohang">
             <ul class="daohang-ul">
                 <li>
-                    <a href="./SecondHandList.html"> 二手房</a>
+                    <a href="#./SecondHandList.html"> 二手房</a>
                 </li>
                 <li>
-                    <a href=""> 新房</a>
+                    <a href="#"> 新房</a>
                 </li>
                 <li>
                     <a href="./rentalList.html"> 租房</a>
@@ -550,7 +550,7 @@
         </div>
         <div class="dowload">
             <div class="dowload-left">
-                <img src="./image/index/close.png" alt="">
+                <img src="./image/index/close.png" alt=""onclick="fn()" class="shanchu">
                 <img src="./image/index/download.png" alt="">
                 <div class="dowload-text">
                     <p>找房无忧</p>
@@ -565,3 +565,9 @@
 
 </html>
 <script src="./js/rem.js"></script>
+<script>
+    var  shanchu=document.getElementsByClassName('shanchu')[0];
+    function fn(){
+        shanchu.parentNode.parentNode.parentNode.removeChild(shanchu.parentNode.parentNode);
+    }
+</script>
