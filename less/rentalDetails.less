@@ -1,0 +1,222 @@
+//封装变量
+.color(@color: rgb(255, 131, 0)) {
+    color: @color;
+}
+
+/* 主体部分 */
+.main {
+    width: 100%;
+
+    &>.title {
+        text-indent: 0.2rem;
+        // font-size: 0.12rem;
+        height: 0.35rem;
+        line-height: 0.35rem;
+        border-bottom: 2px solid rgb(221, 215, 215);
+        background-color: white;
+    }
+
+    /* 主体内容 */
+    &>.content {
+        width: 100%;
+
+        /* 大图 */
+        &>.banner {
+            width: 3.25rem;
+            height: 1.85rem;
+            position: relative;
+
+            &>a>img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &>.share {
+                width: 0.6rem;
+                height: 0.4rem;
+                text-align: center;
+                line-height: 0.4rem;
+                background-color: rgb(28, 21, 18);
+                border-radius: 0.1rem;
+                position: absolute;
+                bottom: 0.1rem;
+                right: 0;
+                // z-index: 2;
+                // font-size: 0.12rem;
+                color: white;
+            }
+        }
+
+        /* 主体内容的标题 */
+        &>.content-title {
+            width: 100%;
+            height: 0.7rem;
+            // background-color: aqua;
+            // font-size: 0.12rem;
+            display: flex;
+            flex-direction: row;
+
+            // justify-content: space-between;
+            &>h2 {
+                flex: 79;
+                line-height: 0.25rem;
+                margin: 0.1rem;
+            }
+
+            &>a {
+                color: rgb(105, 104, 104);
+                flex: 21;
+                text-align: center;
+                padding-top: 0.4rem;
+                border-left: 2px solid rgb(232, 227, 227);
+                background: url(../image/rentalList/xin.png)no-repeat 0.2rem 0.18rem;
+                background-size: 0.22rem;
+            }
+        }
+
+        /* 主体内容的主要房源信息 */
+        &>.message {
+            width: 100%;
+
+            &>.message1 {
+                width: 100%;
+                padding: 0.2rem 0;
+                box-sizing: border-box;
+                border-top: 1px solid rgb(221, 215, 215);
+                border-bottom: 1px solid rgb(221, 215, 215);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                &>li {
+                    flex: 1;
+                    // background-color: aqua;
+                    border-right: 1px solid rgb(221, 215, 215);
+                    text-align: center;
+
+                    &>p {
+                        // font-size: 0.12rem;
+                        line-height: 0.2rem;
+                    }
+
+                    &>p:nth-of-type(2) {
+                        .color;
+                    }
+                }
+
+                &>li:last-child {
+                    border: none;
+                }
+            }
+
+            &>.message2 {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                border-bottom: 1px solid rgb(221, 215, 215);
+                background-color: white;
+
+                &>li {
+                    flex: 1;
+                    // background-color: aqua;
+                    // font-size: 0.12rem;
+                    line-height: 0.5rem;
+                    border-bottom: 1px solid rgb(221, 215, 215);
+                    margin: 0 0.2rem;
+                    display: flex;
+                    flex-direction: row;
+
+                    &>span {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+
+        /* 主体内容的房源信息介绍 */
+        &>.text {
+            width: 100%;
+            &>.text1,
+            .text2,
+            .text3,
+            .text4 {
+                background-color: white;
+                border: 1px solid rgb(221, 215, 215);
+                margin: 0.1rem;
+
+                &>h2 {
+                    line-height: 0.4rem;
+                    border-bottom: 1px solid rgb(221, 215, 215);
+                    text-indent: 0.15rem;
+                    // padding: 0 0.15rem;
+                    .color;
+                    background: url(../image/rentalList/right.png) no-repeat 2.8rem center;
+                    background-size: 0.07rem 0.14rem;
+                }
+
+                &>p {
+                    padding: 0.1rem;
+                    line-height: 0.2rem;
+                }
+            }
+
+            &>.text3>.position {
+                width: 2.8rem;
+                border: 1px solid rgb(221, 215, 215);
+                margin: 0.1rem auto;
+
+                &>h3 {
+                    padding: 0.1rem;
+                    line-height: 0.2rem;
+                }
+
+                &>img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &>.tell{
+        display: flex;
+        flex-direction: row;
+        height: 0.6rem;
+        background-color: white;
+        &>.man{
+            flex: 2;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &>img{
+                flex:1;
+                width: 0.4rem;
+                height: 0.4rem;
+                margin: 0.1rem;
+            }
+            &>.name{
+                flex:4;
+            }
+        }
+        &>.phone{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            &>a{
+                flex: 1;
+                padding-top: 0.4rem;
+                padding-left: 0.02rem;
+            }
+            &>a:nth-of-type(1){
+                .color(rgb(93,203,150));
+                background: url(../image/rentalList/icon1.png) no-repeat  0 0.06rem;
+                background-size: 0.3rem ;
+            }
+            &>a:nth-of-type(2){
+                .color(rgb(91,174,222));
+                background: url(../image/rentalList/icon2.png) no-repeat  0 0.06rem;
+                background-size: 0.3rem ;
+            }
+        }
+    }
+}

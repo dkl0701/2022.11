@@ -1,0 +1,71 @@
+//封装变量
+.color(@color:rgb(255,131,0)){
+    color: @color;
+}
+/* 主体部分 */
+.main{
+    width: 100%;
+    &>.title{
+    text-indent: 0.2rem;
+    // font-size: 0.12rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    border-bottom: 2px solid rgb(221, 215, 215);
+    background-color: white;
+    }
+    /* 主体内容 */
+    &>.content{
+        width: 100%;
+        &>ul{
+            width: 100%;
+            // margin: 0 0.2rem;
+            padding:0 0.2rem;
+            box-sizing: border-box;
+            &>li{
+                width: 100%;
+                height: 1.2rem;
+                padding: 0.2rem 0;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgb(255,131,0);
+                &>.left{
+                    width: 0.81rem;
+                    height: 0.81rem;
+                    // background-color: blueviolet;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    &>img{
+                        width: 100%;
+                        height: 100%;                     
+                    }
+                }
+                &>.right{
+                    width: 1.85rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    line-height: 0.22rem;
+                    // background-color: aqua;
+                    &>h2{
+                        font-size: 0.14rem;
+                    }
+                    &>p{
+                        // font-size: 0.12rem;
+                        &>strong{
+                            .color;
+                            margin-left: 0.1rem;
+                        }
+                    }
+                }
+                
+            }
+            &>li:nth-last-child(1){
+                border-bottom: none;
+            }
+        }
+    }
+}

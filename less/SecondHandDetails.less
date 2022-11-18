@@ -1,0 +1,310 @@
+//封装变量
+.color(@color: rgb(255, 138, 0)) {
+    color: @color;
+}
+
+/* 轮播图和主要房源信息 */
+.content1 {
+    width: 100%;
+    background-color: white;
+
+    &>.swiper {
+        width: 3.2rem;
+        height: 1.85rem;
+
+        &>.swiper-wrapper>.swiper-slide>a>img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &>.main-info {
+        // width: 100%;
+        padding: 0.2rem;
+        border-bottom: 1px solid rgb(223, 221, 221);
+
+        &>p {
+            margin-top: 0.1rem;
+            color: rgb(173, 170, 170);
+
+        }
+
+        &>p:nth-of-type(1) {
+            font-size: 0.14rem;
+            color: black;
+            background: url(../image/SecondHandList/phone.png) no-repeat right center;
+            background-size: contain;
+
+            &>span {
+                .color(rgb(231, 13, 13));
+                font-weight: 900;
+            }
+        }
+
+        &>p:nth-of-type(3) {
+            margin-top: 0.15rem;
+
+            &>span {
+                background-color: rgb(222, 233, 240);
+                margin-right: 0.1rem;
+                padding: 0.05rem;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+/* 户型信息 */
+.content2 {
+    background-color: white;
+    border-top: 1px solid rgb(223, 221, 221);
+    border-bottom: 1px solid rgb(223, 221, 221);
+    margin-top: 0.1rem;
+    padding: 0 0.2rem;
+
+    &>ul>li {
+        border-bottom: 1px solid rgb(223, 221, 221);
+        line-height: 0.5rem;
+        display: flex;
+        flex-direction: row;
+
+        &>p {
+            flex: 1;
+        }
+    }
+
+    &>ul>li:last-child {
+        border-bottom: none;
+        color: gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* 房源特色 */
+.content3 {
+    background-color: white;
+    border-top: 1px solid rgb(223, 221, 221);
+    border-bottom: 1px solid rgb(223, 221, 221);
+    margin-top: 0.1rem;
+    padding: 0 0.2rem;
+
+    &>h2 {
+        line-height: 0.5rem;
+        border-bottom: 1px solid rgb(223, 221, 221);
+        .color;
+    }
+
+    &>p {
+        padding: 0.1rem 0;
+        line-height: 0.25rem;
+        border-bottom: 1px solid rgb(223, 221, 221);
+    }
+
+    &>:last-child {
+        text-align: center;
+        color: gray;
+    }
+}
+
+/* 户型分间 */
+.content4 {
+    background-color: white;
+    border-top: 1px solid rgb(223, 221, 221);
+    border-bottom: 1px solid rgb(223, 221, 221);
+    margin-top: 0.1rem;
+    padding: 0 0.2rem;
+
+    &>h2 {
+        line-height: 0.5rem;
+        border-bottom: 1px solid rgb(223, 221, 221);
+        .color;
+    }
+
+    &>ul>li {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid rgb(255, 138, 0);
+        padding: 0.2rem 0;
+
+        &>.left {
+            flex: 1;
+            width: 0.71rem;
+            height: 0.71rem;
+
+            &>img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &>.right {
+            flex: 2;
+            margin-left: 0.1rem;
+            line-height: 0.25rem;
+
+            &>p>span {
+                background-color: rgb(236, 239, 241);
+                margin-right: 0.1rem;
+                padding: 0.05rem;
+                color: rgb(161, 183, 199);
+            }
+        }
+    }
+
+    &>ul>li:last-child {
+        border-bottom: none;
+    }
+}
+
+/* 对口学校 */
+.content5 {
+    background-color: white;
+    border-top: 1px solid rgb(223, 221, 221);
+    border-bottom: 1px solid rgb(223, 221, 221);
+    margin-top: 0.1rem;
+    padding: 0 0.2rem;
+
+    &>h2 {
+        line-height: 0.5rem;
+        border-bottom: 1px solid rgb(223, 221, 221);
+        .color;
+    }
+
+    &>ul {
+        line-height: 0.5rem;
+
+        &>li {
+            border-bottom: 1px solid rgb(223, 221, 221);
+
+            &>span:nth-last-child(1) {
+                color: gray;
+
+            }
+        }
+
+        &>li:last-child {
+            text-align: center;
+            border-bottom: none;
+
+            &>a {
+                color: gray;
+            }
+        }
+    }
+}
+
+/* 位置及周边 */
+.content6 {
+    background-color: white;
+    border-top: 1px solid rgb(223, 221, 221);
+    border-bottom: 1px solid rgb(223, 221, 221);
+    margin-top: 0.1rem;
+    padding: 0 0.2rem;
+
+    &>h2 {
+        line-height: 0.5rem;
+        border-bottom: 1px solid rgb(223, 221, 221);
+        .color;
+    }
+
+    div {
+        margin: 0.2rem 0;
+
+        &>img {
+            width: 100%;
+        }
+    }
+}
+
+/* 推荐房源 */
+.content7 {
+    background-color: white;
+    border-top: 1px solid rgb(223, 221, 221);
+    border-bottom: 1px solid rgb(223, 221, 221);
+    margin-top: 0.1rem;
+    padding: 0 0.2rem;
+
+    &>h2 {
+        line-height: 0.5rem;
+        border-bottom: 1px solid rgb(223, 221, 221);
+        .color;
+    }
+
+    &>ul>li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(223, 221, 221);
+        padding-bottom: 0.6rem;
+        padding-top: 0.2rem;
+        position: relative;
+
+        &>.img>img {
+            width: 0.81rem;
+            height: 0.81rem;
+        }
+
+        &>.text>h2 {
+            width: 1.87rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        &>.text>p {
+            // padding: 0.05rem 0;
+            line-height: 0.25rem;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &>strong {
+                .color;
+            }
+
+            a {
+                background-color: rgb(236, 239, 241);
+                padding:0 0.05rem;
+                color: rgb(161, 183, 199);
+            }
+        }
+
+        &>.text>p:nth-of-type(2) {
+            color: gray;
+        }
+
+        &>.tip {
+            position: absolute;
+            bottom: 0.18rem;
+            left: 0;
+            background: rgb(242,242,242);
+            width: 100%;
+            padding: 0.1rem;
+
+            &>span {
+                position: absolute;
+                top: -0.18rem;
+                left: 0;
+                border-top: 0.1rem solid transparent;
+                border-right: 0.1rem solid transparent;
+                border-left: 0.1rem solid transparent;
+                border-bottom: 0.1rem solid rgb(242, 242, 242);
+                z-index: 10;
+                margin-left: 0.05rem;
+            }
+        }
+    }
+
+    &>.more {
+        line-height: 0.5rem;
+        text-align: center;
+
+        &>a {
+            color: gray;
+        }
+    }
+}

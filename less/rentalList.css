@@ -1,0 +1,340 @@
+/* 主体部分 */
+.main {
+  width: 100%;
+  /* 主体标题 */
+  /* 搜索框 */
+  /* 导航栏及列表部分 */
+  /* 房屋详情信息 */
+}
+.main > .title {
+  text-indent: 0.2rem;
+  height: 0.35rem;
+  line-height: 0.35rem;
+  border-bottom: 2px solid #ddd7d7;
+  background-color: white;
+}
+.main > .search {
+  width: 2.9rem;
+  margin: 0.1rem auto;
+  position: relative;
+}
+.main > .search > input {
+  width: 2.9rem;
+  height: 0.4rem;
+  outline: none;
+  border-radius: 0.04rem;
+  border: 1px solid #ddd8d8;
+  text-indent: 0.1rem;
+}
+.main > .search > span {
+  position: absolute;
+  top: 0.12rem;
+  right: 0.42rem;
+}
+.main > .search > a > img {
+  width: 0.2rem;
+  height: 0.2rem;
+  position: absolute;
+  top: 0.12rem;
+  right: 0.15rem;
+}
+.main > .nav-list {
+  width: 100%;
+  /* 遮罩层 */
+  /* 导航栏 */
+  /* 点开导航栏弹出的列表 */
+}
+.main > .nav-list > .hide {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(104, 103, 103, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+.main > .nav-list > .nav {
+  width: 100%;
+  height: 0.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #d6d3d3;
+  border-bottom: 1px solid #d6d3d3;
+  background-color: white;
+  position: relative;
+  z-index: 4;
+}
+.main > .nav-list > .nav > li > h2 > a {
+  color: #5f5c5c;
+}
+.main > .nav-list > .nav > li > h2 > a > span {
+  border-top: 0.04rem solid #d7d6d6;
+  border-right: 0.04rem solid transparent;
+  border-bottom: 0.04rem solid transparent;
+  border-left: 0.04rem solid transparent;
+  position: absolute;
+  top: 0.13rem;
+}
+.main > .nav-list > .nav > li > h2 > .active {
+  color: #ff8a00;
+}
+.main > .nav-list > .nav > li > h2 > .active > span {
+  border-top: 0.04rem solid transparent;
+  border-right: 0.04rem solid transparent;
+  border-bottom: 0.04rem solid #ff8a00;
+  border-left: 0.04rem solid transparent;
+  position: absolute;
+  top: 0.1rem;
+}
+.main > .nav-list > .list {
+  width: 100%;
+  position: fixed;
+  top: 0.4rem;
+  left: 0;
+  z-index: 10;
+  /* 区域模块 */
+  /* 月租  */
+  /* 房型 */
+  /* 更多 */
+}
+.main > .nav-list > .list > .area {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+.main > .nav-list > .list > .area > .area-title {
+  flex: 1;
+  background-color: #f0f0f0;
+  border-right: 1px solid #989393;
+  text-align: center;
+}
+.main > .nav-list > .list > .area > .area-title > h2 {
+  width: 100%;
+  line-height: 0.4rem;
+}
+.main > .nav-list > .list > .area > .area-title > .active {
+  background-color: white;
+  border-right: 1px solid white;
+  color: #ff8a00;
+}
+.main > .nav-list > .list > .area > .area-list {
+  flex: 3;
+}
+.main > .nav-list > .list > .area > .area-list > ul {
+  width: 100%;
+  height: 2.8rem;
+  display: flex;
+  line-height: 0.4rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+.main > .nav-list > .list > .area > .area-list > ul > li > a {
+  color: #5a5757;
+}
+.main > .nav-list > .list > .area > .area-list > ul > li > .active {
+  color: #ff8a00;
+}
+.main > .nav-list > .list > .price {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+.main > .nav-list > .list > .price > ul {
+  width: 100%;
+  height: 2.8rem;
+  line-height: 0.38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main > .nav-list > .list > .price > ul > li {
+  margin: 0 0.2rem;
+  border-bottom: 1px solid #d6d3d3;
+}
+.main > .nav-list > .list > .price > ul > li > a {
+  color: #5f5c5c;
+}
+.main > .nav-list > .list > .price > ul > :last-child {
+  border-bottom: none;
+}
+.main > .nav-list > .list > .house {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding-bottom: 0.2rem;
+  box-sizing: border-box;
+  display: none;
+}
+.main > .nav-list > .list > .house > ul {
+  width: 100%;
+  height: 2.8rem;
+  line-height: 0.38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main > .nav-list > .list > .house > ul > li {
+  margin: 0 0.2rem;
+  border-bottom: 1px solid #d6d3d3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main > .nav-list > .list > .house > ul > li > span {
+  width: 0.15rem;
+  height: 0.15rem;
+  border: 1px solid #c4c1c1;
+}
+.main > .nav-list > .list > .house > ul > li > a {
+  color: #5f5c5c;
+}
+.main > .nav-list > .list > .house > ul > li:nth-of-type(3) {
+  background: url(../image/SecondHandList/ok.png) no-repeat right center;
+  background-size: 0.15rem;
+}
+.main > .nav-list > .list > .house > ul > :nth-last-child(2) {
+  border-bottom: none;
+}
+.main > .nav-list > .list > .house > ul > :last-child {
+  width: 2.5rem;
+  background-color: #ff8a00;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main > .nav-list > .list > .house > ul > :last-child > .btnOK {
+  color: white;
+  font-weight: 900;
+}
+.main > .nav-list > .list > .more {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+.main > .nav-list > .list > .more > ul {
+  width: 100%;
+  padding-bottom: 0.2rem;
+  box-sizing: border-box;
+}
+.main > .nav-list > .list > .more > ul > li {
+  width: 100%;
+  margin-top: 0.1rem;
+}
+.main > .nav-list > .list > .more > ul > li > h3 {
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+}
+.main > .nav-list > .list > .more > ul > li > .more-list {
+  border-bottom: 1px solid #d6d3d3;
+  margin: 0.1rem 0.15rem;
+  padding-bottom: 0.1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 0.3rem;
+}
+.main > .nav-list > .list > .more > ul > li > .more-list > li {
+  margin: 0.06rem 0.03rem;
+  width: 0.68rem;
+  height: 0.3rem;
+  border: 1px solid #d6d3d3;
+}
+.main > .nav-list > .list > .more > ul > .clear {
+  text-align: center;
+  line-height: 0.3rem;
+}
+.main > .nav-list > .list > .more > ul > .clear > a {
+  color: #5f5c5c;
+}
+.main > .nav-list > .list > .more > ul > :last-child {
+  width: 2.5rem;
+  background-color: #ff8a00;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 0.3rem;
+}
+.main > .nav-list > .list > .more > ul > :last-child > .btnOK {
+  color: white;
+  font-weight: 900;
+}
+.main > .house-content {
+  width: 100%;
+}
+.main > .house-content ul {
+  width: 100%;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+}
+.main > .house-content ul > li {
+  width: 100%;
+  height: 1.2rem;
+  padding: 0.2rem 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ff8300;
+}
+.main > .house-content ul > li > .left {
+  width: 0.81rem;
+  height: 0.81rem;
+}
+.main > .house-content ul > li > .left > img {
+  width: 100%;
+  height: 100%;
+}
+.main > .house-content ul > li > .right {
+  width: 1.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main > .house-content ul > li > .right > h2 {
+  font-size: 0.14rem;
+  line-height: 0.2rem;
+}
+.main > .house-content ul > li > .right > p {
+  margin-top: 0.1rem;
+  line-height: 0.11rem;
+}
+.main > .house-content ul > li > .right > p > span {
+  border: 1px solid #6da719;
+  padding: 0.02rem;
+  box-sizing: border-box;
+  line-height: 0.21rem;
+  color: #6da719;
+}
+.main > .house-content ul > li > .right > p > strong {
+  color: #ff8a00;
+  margin-left: 0.1rem;
+}
+.main > .house-content ul > li:last-child {
+  border-bottom: none;
+}
