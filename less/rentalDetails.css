@@ -1,0 +1,189 @@
+/* 主体部分 */
+.main {
+  width: 100%;
+  /* 主体内容 */
+}
+.main > .title {
+  text-indent: 0.2rem;
+  height: 0.35rem;
+  line-height: 0.35rem;
+  border-bottom: 2px solid #ddd7d7;
+  background-color: white;
+}
+.main > .content {
+  width: 100%;
+  /* 大图 */
+  /* 主体内容的标题 */
+  /* 主体内容的主要房源信息 */
+  /* 主体内容的房源信息介绍 */
+}
+.main > .content > .banner {
+  width: 3.25rem;
+  height: 1.85rem;
+  position: relative;
+}
+.main > .content > .banner > a > img {
+  width: 100%;
+  height: 100%;
+}
+.main > .content > .banner > .share {
+  width: 0.6rem;
+  height: 0.4rem;
+  text-align: center;
+  line-height: 0.4rem;
+  background-color: #1c1512;
+  border-radius: 0.1rem;
+  position: absolute;
+  bottom: 0.1rem;
+  right: 0;
+  color: white;
+}
+.main > .content > .content-title {
+  width: 100%;
+  height: 0.7rem;
+  display: flex;
+  flex-direction: row;
+}
+.main > .content > .content-title > h2 {
+  flex: 79;
+  line-height: 0.25rem;
+  margin: 0.1rem;
+}
+.main > .content > .content-title > a {
+  color: #696868;
+  flex: 21;
+  text-align: center;
+  padding-top: 0.4rem;
+  border-left: 2px solid #e8e3e3;
+  background: url(../image/rentalList/xin.png) no-repeat 0.2rem 0.18rem;
+  background-size: 0.22rem;
+}
+.main > .content > .message {
+  width: 100%;
+}
+.main > .content > .message > .message1 {
+  width: 100%;
+  padding: 0.2rem 0;
+  box-sizing: border-box;
+  border-top: 1px solid #ddd7d7;
+  border-bottom: 1px solid #ddd7d7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.main > .content > .message > .message1 > li {
+  flex: 1;
+  border-right: 1px solid #ddd7d7;
+  text-align: center;
+}
+.main > .content > .message > .message1 > li > p {
+  line-height: 0.2rem;
+}
+.main > .content > .message > .message1 > li > p:nth-of-type(2) {
+  color: #ff8300;
+}
+.main > .content > .message > .message1 > li:last-child {
+  border: none;
+}
+.main > .content > .message > .message2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border-bottom: 1px solid #ddd7d7;
+  background-color: white;
+}
+.main > .content > .message > .message2 > li {
+  flex: 1;
+  line-height: 0.5rem;
+  border-bottom: 1px solid #ddd7d7;
+  margin: 0 0.2rem;
+  display: flex;
+  flex-direction: row;
+}
+.main > .content > .message > .message2 > li > span {
+  flex: 1;
+}
+.main > .content > .text {
+  width: 100%;
+}
+.main > .content > .text > .text1,
+.main > .content > .text .text2,
+.main > .content > .text .text3,
+.main > .content > .text .text4 {
+  background-color: white;
+  border: 1px solid #ddd7d7;
+  margin: 0.1rem;
+}
+.main > .content > .text > .text1 > h2,
+.main > .content > .text .text2 > h2,
+.main > .content > .text .text3 > h2,
+.main > .content > .text .text4 > h2 {
+  line-height: 0.4rem;
+  border-bottom: 1px solid #ddd7d7;
+  text-indent: 0.15rem;
+  color: #ff8300;
+  background: url(../image/rentalList/right.png) no-repeat 2.8rem center;
+  background-size: 0.07rem 0.14rem;
+}
+.main > .content > .text > .text1 > p,
+.main > .content > .text .text2 > p,
+.main > .content > .text .text3 > p,
+.main > .content > .text .text4 > p {
+  padding: 0.1rem;
+  line-height: 0.2rem;
+}
+.main > .content > .text > .text3 > .position {
+  width: 2.8rem;
+  border: 1px solid #ddd7d7;
+  margin: 0.1rem auto;
+}
+.main > .content > .text > .text3 > .position > h3 {
+  padding: 0.1rem;
+  line-height: 0.2rem;
+}
+.main > .content > .text > .text3 > .position > img {
+  width: 100%;
+  height: 100%;
+}
+.main > .tell {
+  display: flex;
+  flex-direction: row;
+  height: 0.6rem;
+  background-color: white;
+}
+.main > .tell > .man {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main > .tell > .man > img {
+  flex: 1;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: 0.1rem;
+}
+.main > .tell > .man > .name {
+  flex: 4;
+}
+.main > .tell > .phone {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.main > .tell > .phone > a {
+  flex: 1;
+  padding-top: 0.4rem;
+  padding-left: 0.02rem;
+}
+.main > .tell > .phone > a:nth-of-type(1) {
+  color: #5dcb96;
+  background: url(../image/rentalList/icon1.png) no-repeat 0 0.06rem;
+  background-size: 0.3rem;
+}
+.main > .tell > .phone > a:nth-of-type(2) {
+  color: #5baede;
+  background: url(../image/rentalList/icon2.png) no-repeat 0 0.06rem;
+  background-size: 0.3rem;
+}
